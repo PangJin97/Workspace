@@ -1,0 +1,29 @@
+.container{
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  border: 1px solid black;
+
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+
+}
+
+.container > div{
+  border: 1px solid blueviolet;
+}
+
+.container > div:first-child{
+  /* grid 컨테이너가 아닌 아이템에 주는 것은 병합이다. */
+ 
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  /* 시작과 끝은 세트다(열병합/가로/은 column) */
+  
+  /* 한방에 할 수 있음 */
+  grid-column: 1 / 3;
+  /* 1번 부터 3번을 슬러쉬로 */
+
+  /* 행병합(세로)도 전부 똑같다. row로만 바꿔주면 됨. */
+}

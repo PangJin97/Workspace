@@ -1,0 +1,26 @@
+.basic{
+  background-color: aqua;
+}
+
+.large{
+  width: 80%;
+
+}
+/* class 속성에는 여러값을 적용할 수 있음. */
+
+.my-input{
+  padding: 4px;
+  border: 1px solid blueviolet;
+  border-radius: 6px;
+  /* 모서리 둥글게 */
+}
+
+.small{
+  width: 60px;
+}
+
+.large{
+  width: 200px;
+}
+
+/* 추가로 넣고 싶은 서식을 클래스 ""안에 스페이스바 눌러서 추가 */

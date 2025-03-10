@@ -1,0 +1,47 @@
+
+img{
+  width: 200px;
+  height: 200px;
+  /* 원 형을 만들기 위해 너비, 높이 똑같이 */
+  border-radius: 50%;
+  border: 2px solid orange;
+  position: absolute;
+  /* 고정되는게 아니라 곂치게 위치를 강제하고 싶다. 그래서 앱솔로*/
+  /* 먼저 3개가 하나에 합쳐서 나온다. */
+}
+
+.img_1{
+  left: 0px;
+  z-index: 3;
+}
+/* 그래서. */
+
+.img_2{
+  left: 100px;
+  z-index: 2;
+  top:100px;
+}
+/* 반만큼 왼쪽에서 떨어트리고 */
+
+.img_3{
+  left: 200px;
+  z-index: 1;
+}
+/* 원 하나를 왼쪽에서 부터 떨어트림 */
+/* 앱솔이니까 z 인덱스 사용가능. 클수록 앞으로 온다. */
+/* 그런데 앱솔 속성은 body태그를 기준임. 즉, body로 부터 100px 떨어졌다고 볼 수 있음
+/* 그래서 정확한 위치 계산을 하며 디자인하기 힘들다. 기준점을 body가 아닌 인물사진을 기준으로 바꿔야 하는데 그럴때 position : relative */
+
+
+
+.img_div{
+  position: relative;
+}
+
+/* position : absolute
+ 속성을 사용하면 절대 위치를 지정할 수 있는데 기준은 body 태그이다 */
+ /* body태그가 기준이 아니라, 우리가 원하는 기준으로 태그를 기준으로 잡고 싶을 때는
+
+ position : absolute 속성을 줄, 태그의 부모에 position : relative를 준다. 그래서 div라는 부모 태그를 만들고 클래스를 줘서  그 클래스에 css한 것*/
+ /* 이러면 인물 사진을 기준으로 사진을 수정 가능함 */
+ /* 차이점을 확인해 보려면 relative지우고 img_2에서 top속성을 체크해보셈. */

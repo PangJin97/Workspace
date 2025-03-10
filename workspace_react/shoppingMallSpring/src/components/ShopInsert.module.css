@@ -1,0 +1,23 @@
+ 
+.insertTable > table tr td{
+  border: 1px solid black;
+}
+
+.insertTable > table input{
+  margin: 5px;
+}
+
+
+.insertTable > table{
+  padding: 10px;
+  margin: 0px auto;
+}
+
+.button{
+  text-align: center;
+}
+
+
+.insertTable > table{
+  width: 50%;
+}

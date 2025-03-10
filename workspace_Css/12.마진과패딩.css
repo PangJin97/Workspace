@@ -1,0 +1,37 @@
+.d1{
+  border: 1px solid black;
+  width: 200px;
+  /* 안쪽 여백, 안의 내용과 테두리간의 공간을 상하좌우 동일하게  조정 */
+  padding: 20px; /* 상하좌우 안쪽 여백을 20px로 둠 */
+}
+
+.d2{
+  border: 1px solid black;
+  width: 200px;
+  /* 바깥 여백, 테두리 밖의 공간을 상하좌우 동일하게 조정*/
+  margin: 20px; /* 상하좌우 여백 */
+}
+
+
+
+.d3{
+  border: 1px solid black;
+  width: 200px;
+  padding: 10px 20px 30px 40px; /* 12시부터 시계방향 상(10) 하(30) 좌(40) 우(20) */
+
+  padding-top: 10px;
+  /* 위 한쪽에만 여백만 주겠다 */
+  /* top, left, right, bottom 하나씩 줄수있어 */
+  
+  padding: 10px 20px;
+  /* 상하(10px), 좌우(20px) */
+
+  
+  
+  /* 바깥여백도 안쪽여백과 동일하게 다양한 방향으로 여백을 줄 수 있다. */
+  margin: 10px 20px; /*상하 10px 좌우 20px */
+  margin: 10px 20px 30px 40px;
+  margin-bottom: 10px;
+
+
+}

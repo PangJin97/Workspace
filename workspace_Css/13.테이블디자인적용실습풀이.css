@@ -1,0 +1,62 @@
+table{
+  width: 650px;
+  /* 표의 너비를 늘리기 */
+  margin: 0px auto;
+  /* 블록요소는 '자기 자신'(table)에게 마진을 걸고 좌우를 auto로 둔다 */
+  /* auto : 좌우의 바깥여백을 알아서 맞춰준다. */
+  border-collapse: collapse;
+  /* 보더 콜랩스는 반드시 넣기, 어차피 표 만들때 무조건 넣어야함 */
+}
+
+ thead > tr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: skyblue;
+  color: white;
+ }
+ /* 제목 행에는 위, 아래 테두리만! */
+
+ tbody > tr{
+  border-bottom: 1px solid black;
+ }
+  /* 내용에는 아래 태두리만! */
+
+ td{
+  padding: 5px;
+ }
+
+ table{
+  text-align: center;
+ }
+/* 표 전체를 가운데 정렬하고, 제목입니다~~~만 왼쪽으로 */
+
+ tbody > tr > td:nth-child(2){
+  text-align: left;
+}
+/* 내용 행에서 제목열만 정렬 변경 */
+
+ tbody > tr:nth-child(even){
+  background-color: lightgray;
+ }
+ /* 내용 행에서 짝수번 째 행만 배경색 */
+
+
+
+ /* 색상 변경 방법
+ 1. 정해진 키워드 사용(red, blue...)
+ 2. RGB 문법 사용(0~F) 
+    
+    -00 00 00(차례로 빨강 초록 파랑 농도)
+    EX> #000000 ->검은색
+        #ffffff ->흰색
+        #00ff00 ->초록색
+
+    -rgb(0, 0, 255) 차례로 빨강, 초록, 파랑, 농도고 범위는 0~255
+
+    *color hunt 사이트
+
+  3. RGBA 문법 사용
+    -rgb(0, 0, 225, 0~1) 
+    마지막 값이 0이면 투명. 1이면 불투명
+ */
+

@@ -1,0 +1,31 @@
+body{
+  background-color: bisque;
+}
+
+.aaa{
+  border: 1px solid black;
+  width: 500px;
+}
+
+.bbb{
+  border: 1px solid black;
+  width: 500px;
+  /* 영역 만큼만 먹고 크기가 변경 불가 */
+}
+
+.ccc{
+  border: 1px solid red;
+  width: 300px;
+  /* 인라인으로 변경 */
+  /* display */
+  display: inline;
+  /* 인라인으로 변경되서 크기 조절이 안되니 width 삭제해야함 */
+}
+
+.ddd{
+  border: 1px solid blue;
+  width: 300px;
+  /* 블록으로 변경 */
+  display: block;
+  /* 블록으로 변경되서 크기조절이 되니 width적용이 된다. */
+}

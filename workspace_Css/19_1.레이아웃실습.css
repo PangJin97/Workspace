@@ -1,0 +1,72 @@
+.container{
+  border: 1px solid black;
+  /* 영역을 보는게 중요해서 일단 둔다. 완성 되면 삭제 */
+  margin: 0 auto;
+  /* 좌우의 마진을 동일하게 주겠다. margin: 0 auto; */
+  /* 블록태그의 중앙정렬 */
+  /* 이렇게 해도 블록태그라 여백이 없어서 꽉차서 안움직임 */
+  width: 60%;
+  /* 그래서 여백을 줄인다 */
+  margin-top: 30px;
+  /* 위에도 여백을 준다. */
+
+  /* 전체 레이아웃 잡는게 중요 */
+}
+
+
+h2{
+  text-align: center;
+  margin: 8px 0px;
+}
+/* 제목 바깥 여백 */
+
+
+table, tr, td{
+  border: 1px solid black;
+  text-align: center;
+}
+/* reset css에 이미 보더 콜랩스가 있어서 굳이 줄필요없다. */
+
+table{
+  width: 100%
+}
+/* 표의 퍼센트 */
+/* %는 부모태그 기준으로 퍼센트를 센다. 즉, 전체 레이아웃(div)에서 차지 하는 %*/
+
+td{
+  padding: 15px;
+}
+/* 표 안에 여백 */
+
+
+.right-div{
+  text-align: right;
+  font-size: 0.8rem;
+}
+  /* span은 인라인 요소, 인라인 요소의 정렬을 활용한다.*/ 
+  /* 인라인 요소의 정렬은 부모태그에 text-align */
+  /* 부모태그가 div인데 전체 레이아웃이 망가질 수 있어서, 새로운 부모태그 div를 만들고 거기에 text-align을 건다. */
+
+.red{
+  color: red;
+  font-size: 0.8rem;
+  line-height: 120%;
+  /* 줄 간격 디폴트 160퍼, 그래서 글자를 줄였을 때 여백이 커 보이는 거임 그래서 줄간격을 줄이는게 좋아보인다.  */
+  
+}
+
+.btn-div{
+  text-align: right;
+  /* 버튼은 인라인 요소, 인라인 요소의 정렬을 활용한다 */
+  /* 인라인 요소의 정렬은 부모태그의 text-align */
+   /* 부모태그가 div인데 전체 레이아웃이 망가질 수 있어서, 새로운 부모태그 div를 만들고 거기에 text-align을 건다. */
+  margin-top: 10px;
+}
+
+
+/* 제일 먼저 크게 영역을 하나 지정하고 그린다!!!!@@@! */
+/* 성적표에 석차는 표기 되지 않습니다와 2024 어저꾸저저꾸 표에 맞게 사진처럼 정렬하기 */
+
+/* 인라인 요소의 정렬은 부모태그의 text-align */
+/* 블록태그의 정렬은 자기자신의 margin opx auto */
+/* 이거 두개가 이 실습의 핵심! */

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="07_1.실습(테이블디자인적용)_1.css">
+</head>
+<body>
+  <!-- 12행 2열 -->
+   <table>
+    <!-- 테이블 안의 각 열의 너비를 지정할때 씀 -->
+    <colgroup>
+      <!-- col 태그가 열 하나를 의미 그래서 2개넣은거임 -->
+      <col width="20%">
+      <!-- 테이블의 너비인 900px의 20% -->
+      <!-- 첫번째 열 -->
+      <col width="80%">
+      <!-- 두번째 열 -->
+      
+    </colgroup>
+    <tbody>
+      <tr class="title-tr">
+      <!-- 클래스 이름 지정할때 의미부여하기 -->
+        <td colspan="2">
+          <span class="b-span">
+            <span class="red-span">(*필수입력)</span> 
+          회원기본정보
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="red-span">*</span>
+          아이디
+        </td>
+        <td>
+          <input type="text" placeholder="4~12자">
+          <input type="button" value="아이디 검사">
+          <!-- input태그는 인라인블럭이다. 그래서 붙어서 나온다 -->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="red-span">*</span>
+          비밀번호</td>
+        <td>
+          <input type="password">
+          4~12자의 영문 대소문자와 숫자로만 입력 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="red-span">*</span>
+          비밀번호확인
+        </td>
+        <td>
+          <input type="password">
+          <input type="button" value="비밀번호확인">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="red-span">*</span>
+          메일주소
+        </td>
+        <td>
+          <input type="text">
+          <input type="button" value="메일확인">
+          예)id@domain.com
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="red-span">*</span>
+          이름
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr class="title-tr">
+        <td colspan="2">개인 신상 정보</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="red-span">*</span>
+          주민등록번호
+        </td>
+        <td>
+          <input type="text">-
+          <input type="text">
+          <input type="button" value="확인">
+          예)123456-1234567
+        </td>
+      </tr>
+      <tr>
+        <td>생일</td>
+        <td>
+          <input type="text" class="birth">년
+          <input type="text" class="birth">월
+          <input type="text" class="birth">일
+        </td>
+      </tr>
+      <tr>
+        <td>주소</td>
+        <td>
+          <div>
+            <input type="text">
+            <input type="button" value="우편번호 찾기">
+          </div>
+          <div>
+            <input type="text">
+            <input type="text">
+          </div>
+          <!-- div가 블록태그이기 때문에 div로 묶어서 한칸 아래로 보내게 한다 -->
+        </td>
+      </tr>
+      <tr>
+        <td>관심분야</td>
+        <td>
+          <input type="checkbox">컴퓨터
+          <input type="checkbox">인터넷
+          <input type="checkbox">여행
+          <input type="checkbox">영화감상
+          <input type="checkbox">음악감상
+        </td>
+      </tr>
+      <tr>
+        <td>자기소개</td>
+        <td>
+          <textarea rows="5" cols="50"></textarea>
+        </td>
+      </tr>
+    </tbody>
+   </table>
+   
+   <div class="btn-div">
+     <button type="button">회원가입</button>
+     <button type="button">다시 입력</button>
+   </div>
+   <!-- 버튼은 인라인 블럭요소이기 때문에 옆으로 온다.  -->
+  
+</body>
+</html>

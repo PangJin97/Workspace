@@ -1,0 +1,17 @@
+.tableDiv > table tr td{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.tableDiv > table{
+  text-align: center;
+  margin: 0px auto;
+}
+
+
+.sumDiv{
+  text-align: center;
+  margin-top: 20px;
+}
+
+

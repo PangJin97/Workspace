@@ -1,0 +1,107 @@
+body{
+  background-color: aquamarine;
+}
+
+.container{
+  background-color: white;
+  width: 80%;
+  /* 블록태그니까 너비값 줄 수 있음 */
+  margin: 30px auto;
+  /* 블록태그의 정렬 */
+  /* 상하, 좌우 : 위 아래가 좀 띄어져야하니까. */
+  border-radius: 8px;
+  padding: 40px;
+  /* 내용이 태두리(container)와 거리가 좀 있으니, 안쪽여백 */
+  box-shadow: 2px 2px 3px gray;
+  /* 그림자 효과 */
+  /* (햇빛이 비추는 방향)x축, y축, 그림자의 퍼짐 정도  */
+}
+
+.title-p{
+  margin-bottom: 20px;
+  /* 제목과 내용이 거리가 있어야하니까 아래쪽 마진을 준다.*/
+}
+
+.imfor-div > div {
+  margin-bottom: 8px;
+  /* border: 1px solid black; */
+}
+
+.imfor-div p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+/* 자손선택자 공백(스페이스) */
+
+.red{
+  color: red;
+}
+/* ctrl h 누르고 *를 선택하고 모두바꾸기  */
+
+input{
+  padding: 8px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  font-size: 0.6rem;
+  /* 플레이스 홀더의 글자 크기가 줄어둠 */
+  width: 100%;
+}
+
+.imfor-div > div:first-child > input {
+  width: 70%;
+}
+
+.email-div > input, .email-div > select{
+  width: 30%;
+}
+/* 자식 자손 선택자 모두 가능함, e mail태그 아래 태그들이 자식이자 자손들임(포함관계가 아니기 때문에 */
+
+select{
+  padding: 7px 6px;
+  font-size: 0.7rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.birth-div select{
+  margin-right: 2px;
+  width: 31%;
+}
+/* 자손선택자 */
+
+.btn-div{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-div > button{
+  margin: 0px 2px;
+}
+
+.btn{
+  padding: 5px 16px;
+  font-size: 0.7rem;
+  width: 29%;
+  background-color: skyblue;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.small{
+  padding: 5px 12px;
+  box-shadow: 1px 1px 3px gray;
+  width: 20%;
+}
+
+.yellow{
+  background-color: yellowgreen;
+}
+/* 마지막 것이 적용된다. */
+/* 여러 클래스 태그를 부여했을때 */
+
+.first-addr{
+  margin-bottom: 4px;
+}
+
+

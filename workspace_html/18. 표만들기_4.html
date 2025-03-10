@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 500px;
+    }
+    tr, td, th{
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <!-- 제목줄에는 td 대신 th태그를 사용하기도 한다. -->
+        <!-- th : 가운데 정렬, 볼드체 -->
+        <!--css를 배우면 사실 잘 안쓰게 된다. 왜냐면 th는 너무 무난하기 때문에 -->
+        <th>학번</th>
+        <th>이름</th>
+        <th>국어점수</th>
+        <th>영어점수</th>
+        <th>수학점수</th>
+      </tr>
+    </thead>
+    <!-- thead태그는 제목줄 -->
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>김길동</td>
+        <td>60</td>
+        <td>60</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>이길동</td>
+        <td>60</td>
+        <td>80</td>
+        <td>70</td>
+      </tr>
+    </tbody>
+    <!-- tbody는 내용 -->
+    <!-- thead 제목줄 따로, tbody 내용 따로, tfoot 내용 따로, 표를 만든다는 느낌으로 tr, td 태그를 넣으며 배웠던 그대로 진행하면 된다. -->
+    <!-- table태그 안에는 thead, tbody, tr, tfoot만 올 수 있다! -->
+    <tfoot>
+      <tr>
+        <td colspan="2"></td>
+        <td>120</td>
+        <td>140</td>
+        <td>120</td>
+      </tr>
+      <!-- tfoot는 요약 줄 -->
+      <!-- thead, tbody, tfoot 순서가 바뀌어도 thead부터 나온다. -->
+    </tfoot>
+    <!-- 근데 표를 보면 제목줄이 없을 수도 있고 요약도 없을 수도 있고 내용도 없을 수가 있다 -->
+     <!-- 제목줄이 없으면 thead 없애고 tobody, tfoot으로만 진행해도 된다! 다른 것도 마찬가지. -->
+  </table>
+
+
+
+
+  
+</body>
+</html>

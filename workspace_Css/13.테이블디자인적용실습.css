@@ -1,0 +1,41 @@
+table{
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 650px;
+}
+
+
+td{
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px 10px;
+}
+
+.title1{
+  background-color: aqua;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.body{
+  text-align: center;
+}
+
+tbody > tr > td:nth-child(2){
+  text-align: left;
+}
+/* 자식 선택 여러개 할 수 있음 */
+/* 등호는 꼭 붙혀주기 */
+
+tbody > tr:nth-child(even){
+  background-color: bisque;
+}
+
+/* 테이블 크기 자체를 키우려면 글자크기의 비율과 열에 padding을 줘야하는데(height도 줄 수 있음) 근데 그러면 비율이 망가지고 설사 하더라도 비율을 잘 맞춰야 하기 때문에 힘들다. */
+/* 테이블 자체의 width(너비)를 늘리거나 해야하는데 표가 안이쁨 */

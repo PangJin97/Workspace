@@ -1,0 +1,23 @@
+img{
+  width: 100%;
+}
+/* 이미지 div 영역에 100% */
+
+div{
+  position: relative;
+  width: 200px;
+  margin: 0px auto;
+}
+/* 하트의 부모태그'에' relative 속성을 부여해 기준으로 삼는다.*/
+/* div로 부모태그 만든거임 */
+/* div가 한 영역을 다 차지해서 하트가 오른쪽으로 쏠림. 그래서 div를 width로 줄인다. */
+/* 가운데 정렬까지 했음 */
+
+
+i{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* 위치를 강제해야하니까 absolute 속성을 부여 */

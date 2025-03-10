@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    /* 다중 테두리 통합 */
+    tr, td{
+      border: 1px solid black;
+    }
+    /* 태그지정은 여러개 가능 */
+    /* 여기까지 표 작성 css */
+    .a{
+      color: red;
+    }
+    .b{
+      color: red;
+    }
+    .c{
+      background-color: aqua;
+    }
+    .d{
+      text-align: center;
+    }
+    /* 문자 정렬 속성은 text-align */
+    
+ 
+  </style>
+</head>
+<body>
+  <table>
+    <thead class="c">
+      <tr>
+        <td colspan="2" class="d">
+          <span class="a"><i><b>(*필수입력)</b></i></span>
+          <span><b>회원기본정보</b></span>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="b">*</span>
+          <span>아이디:</span>
+        </td>
+        <td>
+          <input type="text" placeholder="4~12자">
+          <button type="button">아이디 검사</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="b">*</span>
+          <span>비밀번호:</span>
+        </td>
+        <td>
+          <input type="password">
+          <span>4~12자의 영문 대소문자와 숫자로만 입력
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="b">*</span>
+          <span>비밀번호확인:</span>
+        </td>
+        <td>
+          <input type="password">
+          <button type="button">비밀번호 확인
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="b">*</span>
+          <span>메일주소:</span>
+        </td>
+        <td>
+          <input type="text">
+          <button type="button">메일확인</button>
+          <span>예)id@domain.com</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="b">*</span>
+          <span>이름:</span>
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+    <tr class="c">
+      <td colspan="2" class="d"><b>개인 신상 정보</b></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="b">*</span>
+        <span>주민등록번호:</span>
+      </td>
+      <td>
+        <input type="text">
+        <span>-</span>
+        <input type="text">
+        <button type="button">확인</button>
+        <span>예)123456-1234567</span>
+      </td>
+    </tr>
+    <tr>
+      <td>생일:</td>
+      <td>
+        <input type="text">
+        <span>년</span>
+        <input type="text">
+        <span>월</span>
+        <input type="text">
+        <span>일</span>
+      </td>
+    </tr>
+    <tr>
+      <td>주소:</td>
+      <td>
+        <input type="text">
+        <button type="button">우편번호찾기</button>
+        <br>
+        <input type="text">
+        <input type="text">
+      </td>
+    </tr>
+    <tr>
+      <td>관심분야:</td>
+      <td>
+        <input type="checkbox">컴퓨터
+        <input type="checkbox">인터넷
+        <input type="checkbox">여행
+        <input type="checkbox">영화감상
+        <input type="checkbox">음악감상
+      </td>
+    </tr>
+    <tr>
+      <td>자기소개:</td>
+      <td>
+        <textarea rows="5" cols="50"></textarea>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
+
+<!-- span 태그가 늘어난다고 표에 영향이 가는 거 아님 폰트 사이즈나 테이블 자체 크기를 늘리거나 줄여야함  -->
+ <!-- 일반적인 글자를 넣을때 그냥 넣는 건 지양 해야한다. p태그나 div태그, span태그를 넣자 -->
+

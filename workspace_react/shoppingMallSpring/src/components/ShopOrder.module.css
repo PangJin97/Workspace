@@ -1,0 +1,18 @@
+.main>table tr td{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+h3{
+  text-align: center;
+}
+
+.main>table{
+  width: 60%;
+  margin: 0px auto;
+}
+
+
+.btn{
+  text-align: center;
+}

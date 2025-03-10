@@ -1,0 +1,5 @@
+BussinessMan - Man => Mantest  : 1번
+Chef - MasterChef => ChefTest : 2번
+MobilePhone - SmartPhon => PhoneTest : 3번 
+Cake - CheeseCake - StrawberryCheeseCake => CakeTest:4번
+UnivFriend - CompFriend - Friend => PersonTest 1,2 : 5번 

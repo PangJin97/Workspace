@@ -1,0 +1,33 @@
+.header{
+  background-color: black;
+  color: white;
+  height: 120px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction row가 디폴트니까 굳이 안적어도 됨 */
+}
+
+.header > div{ 
+  border: 1px solid yellow;
+  width: 34%;
+  margin: 0px 20px;
+}
+
+ul{
+  border: 1px solid red;
+  display: flex;
+  /* ul이 블록태그라 아래로 띄어져 있음, display 속성을
+  flex종류로 바꾸면 디폴트값에 의해서 가로로 정렬된다 */
+ 
+  justify-content: space-between;
+}
+ /* 메뉴의 플렉스 컨테이너 */
+
+li{
+  border: 1px solid blue;
+  /* 메뉴의 플렉스 아이템이니 width 줄수있다 */
+}
+
+

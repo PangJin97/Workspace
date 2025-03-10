@@ -1,0 +1,25 @@
+.insertDiv > table{
+  margin: 0px auto;
+}
+
+
+
+.insertDiv > table input{
+  width: 98%;
+  padding: 3px;
+}
+
+.insertButton{
+  text-align: center;
+}
+
+.insertButton > button{
+  background-color: #5b9bd4;
+  color: white;
+  width: 90px;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+

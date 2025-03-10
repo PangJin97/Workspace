@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>자바스크립트 시작하기</h2>
+
+  <script>
+    //요것이 자바스크립트 주석입니다. 
+    console.log('hello javascript~'); //출력문
+
+    let num = 5;
+    let num2 = 5.5;
+    let num3 = 'hello';
+    let num4 = "hi";
+    let num5 = true;
+    //내부적으로는 자료형이 존재
+    //하지만 변수 선언할때 자료형 쓰지 않는다. 
+
+    num3 = num;
+    //자료형이 달라도 변수 갈아치우기 가능 
+
+    //let, const의 차이점
+    const name = 'kim';
+    //name = 'Lee' const로 선언된 값은 한번 값이 할당되면 변경불가! 
+    //콘솔창에서 오류 난다. 웹페이지에서 확인하게 개발자 모드.
+
+    let data;
+    console.log(data);
+    //console.log(myHome)
+
+    let data_1 = 5;
+    let data_2 = 10;
+    console.log(data_1, data_2, 'Hello')
+
+    let nick_name = '김자바'
+    let addr = '울산시'
+    let score = 80;
+
+    //이름은 김자바이고, 울산시에 살고 있으며, 제 점수는 80점입니다. 
+    console.log(`이름은 ${nick_name}이고, ${addr}에 살고 있으며, 제 점수는 ${score}점 입니다.`);
+
+    let num8 = 7;
+    console.log(num8++);
+    
+    let data_3 = true;
+    console.log(!data_3); 
+    console.log(3 == 3);
+    console.log(3 == '3');
+    console.log(3 === '3');
+    //자바스크립트는 = 3개쓴다.
+    
+    console.log(10 / 4)
+    //나누어 떨어지지 않으면 실수로 나온다.
+
+  
+    
+
+
+  </script>
+</body>
+</html>

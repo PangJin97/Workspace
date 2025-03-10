@@ -1,0 +1,77 @@
+.container{
+  padding: 20px;
+  width: 70%;
+  margin: 30px auto;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.left{
+  display: inline-block;
+  width: 50%;
+  margin-right: -6px;
+  background-color: beige;
+  border-radius: 5px;
+  border: none;
+  padding: 6px 8px;
+}
+/* div라서 인라인 블럭으로 바꿔준다. 그래야 옆으로 오고 늘릴 수 있으니까 */
+/* display를 써서 요소를 변환했을때 정렬기준은 바뀐거 기준이다. */
+
+.right{
+  display: inline-block;
+  width: 50%;
+  /* width: 50%; 하면 left right사이에 조그마한 공간이 있어서 넘어간다 그래서 49% */
+  padding: 0px 25px;
+}
+/* 이미 박스 사이징이 테두리로 되 있는데다가 width 50퍼 50퍼 다 채워짐 그래서 서로 간격을 넓히려면 안쪽여백을 좌나 우로 줘서 간격을 넓히는 수 밖에 없다. */
+
+.left > p{
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.left > input{
+  margin: 6px 2px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 3px;
+  border: 1px solid gray;
+}
+
+.btn-1{
+  margin-top: 6px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.btn-2{
+  width: 35%;
+  border-radius: 5px;
+  border: none;
+  background-color: tomato;
+  color: white;
+  padding: 7px;
+}
+
+.right p{
+  font-size: 0.7rem;
+  text-align: left;
+  margin: 8px 0px;
+}
+
+.btn-3{
+  width: 100%;
+  padding: 5px;
+  background-color: skyblue;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+
+.green > p{
+  color: green;
+  text-align: center;
+}
+

@@ -1,0 +1,67 @@
+
+/* css주는 법  */
+/* 파일명에 module.css붙이기 */
+/* import styles from './BoardList.module.css'  이런식으로 연결*/
+/* 클래스 지정할때 className={styles.클래스이름} => 객체부르듯 */
+
+
+
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+thead > tr, thead td{
+  border: 1px solid white;
+  padding: 8px;
+  background-color: #5b9bd4 ;
+  color: white;
+  font-weight: bold;
+}
+
+tbody > tr, tbody td{
+  border: 1px solid white;
+  padding: 8px;
+}
+
+tbody > tr:nth-child(odd){
+  background-color: #d2deee;
+}
+
+tbody > tr:nth-child(even){
+  background-color: #eaeef7;
+}
+
+tbody td:nth-child(2){
+  text-align: left;
+}
+
+
+.tableDiv>table{
+  margin: 0px auto;
+  border: 1px solid black ;
+}
+
+.buttonDiv > button{
+  background-color: #5b9bd4;
+  color: white;
+  width: 90px;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.buttonDiv{
+  margin-top: 20px;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+.searchDiv{
+  text-align: center;
+  margin: 20px 0PX;
+}
+

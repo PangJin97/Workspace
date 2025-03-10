@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="19_1.레이아웃실습.css">
+</head>
+<body>
+  
+  <!-- 전체를 네모난 박스로 감쌀 수 있는 영역을 하나 만들어 
+   ,콘테이너 박스, 클래스 만들기-->
+   <!-- 모든것을 감싸는 div하나 만들었다. -->
+  <div class="container">
+    <h2>학생 성적표</h2>
+    <!-- h2태그라 한칸 내려가는 span 태그 -->
+      <div class="right-div">
+        <span>2024학년도 2학기 시험 성적</span>
+      </div>
+      <table>
+      <!-- table은 블록 태그라서 한칸 내려간다. -->
+       <thead>
+        <tr>
+          <td>N0</td>
+          <td>이름</td>
+          <td>학년</td>
+          <td>총점</td>
+        </tr>
+       </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>홍길동</td>
+          <td>4학년</td>
+          <td>270</td>
+        </tr>
+      </tbody>  
+    </table>
+    <span class="red">*성적표에 석차는 표기 되지 않습니다.</span>
+
+    <h2>상세정보</h2>
+    <table>
+      <thead>
+        <tr>
+          <td>국어점수</td>
+          <td>영어점수</td>
+          <td>수학점수</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>90</td>
+          <td>85</td>
+          <td>95</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="btn-div">
+      <button type="button">확인</button>
+      <button type="button">수정</button>
+    </div>
+    <!-- 버튼은 인라인 태그라 옆으로 올거임 -->
+  </div>
+
+</body>
+</html>

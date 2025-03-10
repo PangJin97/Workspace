@@ -1,0 +1,48 @@
+
+div{
+  color: blue;
+}
+
+div{
+  background: green;
+}
+
+
+.p1{
+  color: red;
+}
+
+.p1{
+  background-color: brown;
+}
+
+/* 증복된 속성을 부여하면 '가장 마지막 속성'이 적용된다. */
+
+span{
+  font-size: 20px;
+  
+  /*최고우선순위로 강제 변경하고 싶으면*/
+  /* font-size: 20px !important; */
+  
+}
+
+.s1{
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* 선택자가 달라도 같은 태그를 가리키면 모두 적용이 된다. */
+
+/* 단, 다른 선택자에서 같은 속성을 변경(font-size)하면 선택자의 우선순위에 따라 설정이 적용된다. */
+
+/* 3순위 id선택자, 4순위 클래스 선택자, 5순위 태그명선택자 */
+
+/* 위의 같은 경우는 클래스 선택자가 태그명 선택자(보다 우선순위 높으니까 클래스 선택자(s1)의 속성이 설정 적용된다. */
+
+/* 1순위 !important style 
+2순위 inline style(html파일에 간략히 style을 지정) */
+
+h5{
+  color: gray;
+}
+/* 18.선택자 우선순위 참조 */

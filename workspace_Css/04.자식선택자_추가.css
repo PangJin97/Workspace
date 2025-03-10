@@ -1,0 +1,30 @@
+/* div 태그 안의 자식 p태그 중 첫번째 자식 */
+div > p:first-child{
+  color: red;
+  /* p태그의 첫번째 자식을 골라라 */
+}
+
+/* div 태그 안의 자식p태그 중 마지막 */
+div > p:last-child{
+  color: blue;
+}
+
+
+/* div 태그 안의 자식 p태그 중 순번으로 선택 */
+div > p:nth-child(2){
+  color: green;
+  /* nth:몇번째 */
+  /* ()는 몇번째를 선택할거야? 숫자기입 */
+}
+
+
+/* ul태그 안의 자식 li 중 짝수번수만 선택 */
+/* even : 짝수 odd : 홀수 */
+ul > li:nth-child(even){
+  color: blue;
+}
+
+ul > li:nth-child(odd){
+  color: red;
+}
+

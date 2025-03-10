@@ -1,0 +1,33 @@
+.container{
+  border: 5px solid red;
+  width: 500px;
+  margin: 20px;
+}
+
+.inner1{
+  font-size: 2rem;
+  border: 5px solid black;
+  padding: 0px 10px;
+  width:500px
+  /* 왜 같은 width값인데 inner1은 튀어나올까 */
+  /* 기본적으로 width 속성은 content 영역의 크기 */
+  /* width가 500으로 설정해도 보더(20px) 패딩(좌우10px)까지 포함하면 530px */
+  /* 이러면 사이즈 조절이 불편할 수 도 있다. 그래서 박스 사이징을 지정한다.*/
+  /* 박스 사이징이란? 요소의 너비와 높이를 계산하는 방법을 지정하는 속성 */
+  /* box-sizing: content-box; */
+  /* content영역을 기준으로 크기를 표현 */
+  /* 박스 사이징을 지정 해 주지 않으면 초기값은 content-box */
+}
+
+.inner2{
+  font-size: 2rem;
+  border: 5px solid black;
+  padding: 0px 10px;
+  width:500px
+  box-sizing : border-box;
+}
+
+/* box-sizing:boreder-box  */
+/* border영역을 기준으로 크기를 표현 */
+/* 요소의 크기를 width 값과 동일하게 설정하고 싶다면 box-sizing 값을 border-box로 설정해놓는 것이 바람직하다. */
+/* 설정했다면 width를 넣어서 직관적으로 */

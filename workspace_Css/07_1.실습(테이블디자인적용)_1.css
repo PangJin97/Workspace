@@ -1,0 +1,51 @@
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 900px;
+   /* 블록 요소(table) 중앙 정렬 : margin: auto*/
+  margin: 20px auto;
+  /* 2개가 있으면 상하(0) 좌우(auto) */
+  /* 블록태그를 가운데로 주려면 
+   중앙 정렬이 될 '자신'에게 margin: 00px auto; */
+  /* auto : 좌우 마진 동일하게 맞춤 */
+}
+
+tr, td{
+  border: 1px solid black;
+}
+/* 서식이 똑같으면 쉼표를 넣고 선택자를 추가하면 된다 */
+
+td{
+  padding: 4px;
+}
+
+.title-tr{
+  background-color: aqua;
+  text-align: center;
+}
+
+.b-span{
+  font-weight: bold;
+}
+
+.red-span{
+  color: red;
+  font-style: italic;
+  font-size: 0.8rem;
+  /* rem은 상대적일때 */
+}
+
+.btn-div{
+  text-align: center;
+}
+/* 인라인, 인라인 블럭 가운데 정렬 */
+/* '부모요소'에 text-align 속성 사용 */
+/* 다만 부모가 tbody라 기준으로 삼기엔 위험해서 div로 부모를 만들고, div에 class속성을 부여하고 text align 했다 */
+
+.birth{
+  width: 60px;
+}
+
+tr > td:first-child{
+  text-align: center;
+}

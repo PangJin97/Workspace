@@ -1,0 +1,25 @@
+.container{
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  border: 1px solid black;
+
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+
+  align-items: center;
+  justify-items: center;
+}
+/* 요소들의 전체를 움직일때  */
+
+.container > div{
+  border: 1px solid red;
+}
+
+.container > div:first-child{
+  align-self: start;
+  justify-self: start;
+}
+
+/* 각각의 요소들을 움직일때 */

@@ -1,0 +1,90 @@
+/* 가상클래스 : 가상의 선택자 */
+/* p:first child() */
+/* p:nth - child() */
+/* 콜론 다음에 들어오는 걸 가상클래스 */
+
+
+div{
+  width: 150px;
+  height: 150px;
+  background-color: blueviolet;
+  color: white;
+  border: 1px solid black;
+  font-size: 2rem;
+  margin: 30px;
+  text-align: center;
+  line-height: 150px;
+
+  /* transition: all 1s; */
+  /* 1초동안 변환 시킨다. */
+  /* 1초 걸릴건데 어떤걸 할때? 모든 거를... */
+  /* 이거는 눈요기용 중요하지 않음. */
+}
+
+.d1:hover{
+  /* 마우스 올릴 때 */
+  /* 마우스를 안올리고 있을 때는 div가 적용되고 있음. */
+  width:300px;
+  height:300px;
+  line-height:300px;
+}
+
+.d2:hover{
+  background-color: chocolate;
+  color: yellow;
+
+}
+
+input{
+  width: 150px;
+  margin-left: 30px;
+  outline: none;
+  /* 인풋태그는 기본적으로 클릭하면 검은 테두리를 생성하는데
+  엄밀히 말하면 보더가 아니라 아웃라인임 */
+}
+
+input:focus{
+  /* 클릭 됐을때 */
+  width: 300px;
+  border: 3px solid green;
+}
+
+.li-1:before{
+  content: "new";
+  /* before : 선택자 앞에 인라인 요소를 추가 */
+  /* 추가적인 내용은 content속성을 넣는다. */
+  background-color: blue;
+  /* 새로 추가한 요소의 배경색이 적용됨 */
+  /* 즉 어떤 속성을 추가하면, content에 추가한 요소에 적용됨 */
+  color: white;
+  border-radius: 6px;
+  padding: 3px 6px;
+  margin-right: 6px;
+}
+
+.li-1::after{
+  content: "css";
+  color: red;
+}
+/* 비포 에프터 동일함 */
+/* 사용하는 이유: 유지보수(수정작업) 용이 */
+
+
+/* 쉬운결론
+콜론 하나는 css2문법 콜론 2개는 css3문법
+호환성을 위해서 콜론 하나쓰면 된다.
+vscode에서 자동완성 되는 대로 써라*/
+
+/* 부가설명 
+css3에서 가상요소(::)와 가상 클래스(:)를 구분하기 위해 추가 */
+
+/*
+가상요소: 실제로 존재하지 않는 요소의 스타일을 적용할때 
+사용
+before, after
+first - line : 요소의 첫번째 줄
+first - letter : 요소의 첫번째 글자 
+ 
+가상클래스 : 요소의 상태나 조건에 따라 스타일을 적용할 때 사용 
+hover, focus, nth-child(), first-child
+*/

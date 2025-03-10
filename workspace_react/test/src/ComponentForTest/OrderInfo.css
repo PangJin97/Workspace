@@ -1,0 +1,58 @@
+.orderContainer {
+  margin: 0px auto;
+  width: 60%;
+}
+
+.orderList-table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+
+.orderList-table tr,
+.orderList-table td {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.list-head {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
+
+.list-body > tr:nth-child(odd) {
+  background-color: lightblue;
+}
+
+.list-body > tr:nth-child(even) {
+  background-color: aliceblue;
+}
+
+/* ------------------ */
+
+.orderDetail-table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+.orderDetail-table tr,
+.orderDetail-table td {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.detail-body td:nth-child(odd) {
+  background-color: lightblue;
+}
+
+.detail-body td:nth-child(even) {
+  background-color: aliceblue;
+}
+
+h2 {
+  margin-top: 30px;
+  text-align: center;
+}

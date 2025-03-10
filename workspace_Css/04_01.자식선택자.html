@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 서브메뉴1, 2 베경 변경 */
+    ul > li{
+      background-color: blueviolet;
+      /* 볼드체 : bold */
+      font-weight: bold;
+    }
+    /* ul > li : ul태그의 자식 li만 선택하겠다 */
+    /* > : 자식을 의미한다. */
+
+  </style>
+</head>
+<body>
+  <h2>자식선택자</h2>
+
+  <ol>
+  <!-- li의 부모 -->
+    <li>
+    <!-- ol의 자식 -->
+      메뉴 
+      <ul>
+      <!-- ol의 자손 -->
+        <li>서브메뉴1</li>
+        <li>서브메뉴2</li>
+      </ul>
+    </li>
+    <li>메뉴</li>
+  </ol>
+
+  
+  <!-- 부모 자식 자손 관계 -->
+  <table>
+  <!-- tr태그의 부모 -->
+    <tr>
+    <!-- table태그의 자식이자 자손(둘다 되는 거다), td태그의 부모 -->
+      <td></td>
+      <!-- table태그의 자손이자 tr태그의 자식 -->
+    </tr>
+    <tr>
+    <!-- table태그의 자손, table 태그 아래의 태그 전부는 자손이다. -->
+    <!--table태그 바로 밑에 있는 것은 자식도 되면서 자손도 된다!!!! -->
+      <td></td>
+    </tr>
+  </table>
+  
+
+
+
+
+
+</body>
+</html>
