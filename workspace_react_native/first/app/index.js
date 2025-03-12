@@ -11,10 +11,7 @@ import Style2 from '../components/Style2'
 // 버튼과 같이 터치 이벤트가 필요한 컴포넌트는 <Pressable> 컴포넌트 사용 
 const MainScreen = () => {
   return (
-      <SafeAreaView>
-        <Style1 /> 
-        <Style2 />
-      </SafeAreaView>
+    <Style2 />
   )
 }
 

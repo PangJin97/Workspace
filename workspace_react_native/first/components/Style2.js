@@ -13,7 +13,7 @@ const Style2 = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
+       <View style={styles.content}>
         <View>
           <Text>아이디</Text>
           <TextInput
@@ -45,8 +45,9 @@ export default Style2;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    justifyContent: "center",
+    //padding: 20,
+    //justifyContent: "center",
+    borderWidth:3
   },
 
   content: {
