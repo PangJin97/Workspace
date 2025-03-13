@@ -53,6 +53,11 @@ const ShopList = () => {
                       onClick={(e) => {
                         //setIsShow(true);
                         setSendItemNum(shop.itemNum);
+                        //평소엔 sendItemNum값이 null이니 falsy한 데이터라
+                        //보이지 않음 
+                        
+                        //클릭하면 sendItemNum값이 null이 아니게 
+                        //되면서 truty하게 되면서 화면에 띄어진다 
                       }}
                     >
                       {shop.itemName}
@@ -72,6 +77,8 @@ const ShopList = () => {
         {
            //isShow ? <ShopDetail sendItemNum={sendItemNum} /> : null
            sendItemNum && <ShopDetail sendItemNum={sendItemNum} />
+           //sendItem의 초기값을 null로 줌으로써 falsy한 데이터라 처음엔
+           //화면에 띄우지않음 
         }
       </div>
     </div>

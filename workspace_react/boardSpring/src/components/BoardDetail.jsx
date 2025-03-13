@@ -76,6 +76,9 @@ const BoardDetail = () => {
 
 
   //조회 쿼리 여러개 실행
+  //댓글 목록 조회, 마운트 될때 boardNum, cnt 값이 변경될때
+  //다시 댓글 목록을 조회해서 보여준다 
+  //단!   cnt 값이  유스스테이스 값이여야함 
   useEffect(() => {
     axios
       .all([

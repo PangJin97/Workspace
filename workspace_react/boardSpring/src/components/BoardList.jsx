@@ -149,7 +149,7 @@ const BoardList = () => {
         </div>
 
         <div className={styles.buttonDiv}>
-          <button
+          <button 
             type="button"
             onClick={(e) => {
               nav("/join");

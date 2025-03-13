@@ -10,6 +10,9 @@ import java.util.List;
 public interface BoardMapper {
 
   public List<BoardDTO> getBoardList(SearchDTO searchDTO);
+  //#{searchValue}는 => searchDto.getSearchValue 로 해석되는데
+  //없잖아?? 없으면 만들면 되지
+  //빈값을 채우기위해 DTO클래스를 새로 만들어야함
 
   public BoardDTO getBoardDetail(int boardNum);
 

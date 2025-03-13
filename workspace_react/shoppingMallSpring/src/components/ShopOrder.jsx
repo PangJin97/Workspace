@@ -14,7 +14,10 @@ const ShopOrder = () => {
   const [orderData, setOrderData] = useState({
     itemNum: "",
     price: "상품을 선택하세요",
-    //상품 단가
+    //상품 단가 
+    //DB에 buyPrice를 어떻게 가져가서 insert할까,,,,
+    //일단 상품 단가를 가져간다. 
+
     buyer: "",
     buyCnt: 1,
   });
@@ -34,10 +37,21 @@ const ShopOrder = () => {
   }, []);
 
   //3. 상품단가(price 찾기)
+
+  //itemNum은 주문db테이블에도 있고 상품정보db테이블에도 있다! 
   const changerOrderData = (e) => {
     if(e.target.name === 'itemNum'){
+      //상품을 선택하기(이벤트) 할때 name 속성값이 itemNum일때 
       let itemPrice = 0;
       for(const order of orderInfo){
+        //상품 하나를 선택했을 때(이벤트) value 의 속성값과( ex) itemNum=4) 
+        //조회한 상품 리스트의 상품 번호와 같은
+        //아이템 가격을 상품 단가에 넣겠다
+        // 최종목표는 그 상품 단가를 db로 가져가서 구매수량과 곱해 빈값을 채우고 
+        // 구매가격을 구하겠다!
+        
+        //e.target.value은 select에서 선택한 상품의 상품번호
+        //order.itemNum은 조회한 상품리스트의 상품번호
         if(e.target.value == order.itemNum){
           itemPrice = order.itemPrice;
         }
@@ -48,20 +62,13 @@ const ShopOrder = () => {
         price : itemPrice,
       });
     }
+    //만약에 일치하는 상품번호가 없다면 그냥 진행 
     else{
       setOrderData({
         ...orderData,
         [e.target.name]: e.target.value
     })}
   };
-
-   //
-   // orderInfo.find((e)=>{return e.itemNum == e.target.value}).itemPrice 
-  
-   // e : orderInfo리스트의 하나하나의 객체(oreder)
-  //조건이 참인 데이터 하나만 리턴해줌 
-  //리턴해준 것의 itemPrice
-
 
   const insertOrder = ()=>{
     axios.post('/api/orders', orderData)
@@ -73,7 +80,6 @@ const ShopOrder = () => {
             console.log(error)
           })
   }
-
 
   return (
     <div className={styles.container}>
@@ -89,7 +95,6 @@ const ShopOrder = () => {
                   value={orderData.itemNum}
                   onChange={(e) => {
                     changerOrderData(e);
-                    
                   }}
                 >
                   <option value="">선택</option>

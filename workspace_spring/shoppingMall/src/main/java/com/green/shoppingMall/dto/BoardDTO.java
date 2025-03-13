@@ -18,4 +18,6 @@ public class BoardDTO {
   private LocalDateTime regDate;
   private List<ReplyDTO> replyList;
   /*1 대 n 관계 board : board_reply*/
+  /*List<ReplyDTO> replyList 댓글여러개를 가지니까
+  * list로 받는다  */
 }

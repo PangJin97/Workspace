@@ -11,8 +11,6 @@ public interface TestMapper {
 
 
   public List<JoinDTO> getEmpList();
-  public  List<BoardDTO> getBoardList();
-  public BoardDTO getBoard(int boardNum);
 
   public List<BoardDTO> joinList();
 

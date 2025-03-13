@@ -17,9 +17,14 @@
             ,#{buyer}
             ,#{buyCnt}
             ,#{price} * #{buyCnt}
+            <!--리엑트에서 구한값으로 빈값 채워서 insert하기 -->
         )
     </insert>
 
+    <!--왜 order 테이블을 기준으로 잡음? 내가 하려는 목표는 주문목록을 조회하는 거니까
+    order테이블을 기준으로 잡은거고-->
+    <!--주문하나는 상품하나와 1대1관계-->
+    <!--만약에 상품을 기준으로 삼았다 치자 그럼 상품 기준으로는 주문과 1대n관계이다-->
     <resultMap id="order" type="OrderDTO">
         <result column="ORDER_NUM" property="orderNum"/>
         <result column="ITEM_NUM" property="itemNum"/>
