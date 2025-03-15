@@ -1,0 +1,19 @@
+.editContainer {
+  padding: 3px;
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+
+.editContainer > input {
+  padding: 5px;
+  width: 80%;
+}
+
+.editContainer > button {
+  padding: 6px;
+  background-color: #98d2c0;
+  color: #780c28;
+  border-radius: 6px;
+  width: 20%;
+}
