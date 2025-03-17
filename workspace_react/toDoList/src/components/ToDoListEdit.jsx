@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ToDoListEdit.module.css"
 
 const ToDoListEdit = ({toDoList, doList, setToDoList, setIsEdit}) => {
@@ -7,16 +7,18 @@ const ToDoListEdit = ({toDoList, doList, setToDoList, setIsEdit}) => {
   //다만 구조분해 할당을 통해 바로 뽑아 쓰는 거 쁀
 
 
-  const[editText, setEditText] = useState(doList.text)
+  const[editText, setEditText] = useState('')
+
+  useEffect(()=>{
+    setEditText(doList.text)
+  },[doList])
 
   const edit = () => {
-    const foundText = toDoList.find((texts) => texts.id === doList.id);
-    //만약 찾은게 있다면 foundText값은 참이 되고 if문 실행 
-    if (foundText) {
-      foundText.text = editText;
-      setToDoList([...toDoList]); // 새로운 배열을 만들어 상태 업데이트
-    }
-    setIsEdit(null); // 편집 모드 종료
+    const copyDoList=[...toDoList]
+    const foundText = copyDoList.find((doIt) =>{return doIt.id === doList.id});
+   foundText.text = editText
+   setToDoList(copyDoList)
+    setIsEdit(null); // 수정 모드 종료
   };
 
   return (
