@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TextInput, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
 import icon_edit from "../assets/icons/edit.png";
 // import icon_edit from '@/assets/icons/edit.png'
@@ -9,6 +9,7 @@ import icon_edit from "../assets/icons/edit.png";
 import icon_delete from "@/assets/icons/delete.png";
 import { icon } from "../constants/icons";
 import { data } from "../data/data";
+import Task from "./Task";
 
 const CartList = () => {
   //상품 목록을 저장할 변수
@@ -17,7 +18,11 @@ const CartList = () => {
   //입력한 값을 변수에 저장
   const [newItem, setNewItem] = useState("");
 
-  console.log(cartList)
+  //각 상품이 수정 상태인지, 수정 상태가 아닌지 판단하는 변수 
+  
+  //const [isEditing, setIsEditing] = useState(false)
+  //여기서 하면 상품 리스트 전부가 안보임.. 그래서 상품을 컴포넌트(task)로 만들고 그 안에서 만듬 
+
 
   return (
     <View>
@@ -57,12 +62,8 @@ const CartList = () => {
 
       {cartList.map((item, i) => {
         return (
-          <View key={i} style={styles.container}>
-            <Text style={styles.title}>{item.item}</Text>
-            <Image source={icon.ICON_EDIT} />
-            <Image source={icon.ICON_DELETE} />
-          </View>
-          // 이걸 컴포넌트로 따로 빼서 컴포넌트를 반복돌림
+          <Task item={item} key={i} cartList={cartList} setCartList={setCartList}/>
+          // 여기서 key는 프롭스가 아니다. 
         );
       })}
     </View>
@@ -72,22 +73,6 @@ const CartList = () => {
 export default CartList;
 
 const styles = StyleSheet.create({
-  container: {
-    borderWidth: 1,
-    margin: 12,
-    backgroundColor: "#eeeeee",
-    borderRadius: 4,
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 10,
-    gap: 8,
-  },
-
-  title: {
-    flex: 1,
-    borderWidth: 1,
-    fontSize: 18,
-  },
 
   input: {
     borderWidth: 1,
