@@ -81,7 +81,7 @@ public class SecurityConfig {
   public CorsConfigurationSource corsConfigurationSource(){
     CorsConfiguration config = new CorsConfiguration();
     config.setAllowCredentials(true);
-    config.addAllowedOrigin("htt://localhost:5173"); //리엑트에서 스프링으로 접근 허용
+    config.addAllowedOrigin("http://localhost:5173"); //리엑트에서 스프링으로 접근 허용
     config.addAllowedHeader("*"); //모든 헤더 정보 허용
     config.addAllowedMethod("*"); //react에서 get, post, delete, put 허용
 

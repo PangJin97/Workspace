@@ -48,7 +48,4 @@ public class MainController {
     log.info("test5() 메서드 실행");
     return "test5";
   }
-
-
-
 }
