@@ -1,6 +1,9 @@
 package com.green.security_exam.config;
 
+import com.green.security_exam.jwt.JwtConfirmFilter;
+import com.green.security_exam.jwt.JwtUtil;
 import com.green.security_exam.jwt.LoginFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +28,10 @@ import java.text.Normalizer;
 @Configuration //객체 생성 + 해당 클래스에 설정 내용이 들어있음을 알려줌
 @EnableWebSecurity //해당 클래스가 security 설정을 컨트롤 할 수 있도록 세팅하는 어노테이션
 @EnableMethodSecurity(prePostEnabled = true, securedEnabled = true)
+@RequiredArgsConstructor
 public class SecurityConfig {
+
+  private final JwtUtil jwtUtil;
 
   /*
   * 실제 시큐리티의 인증&인가에 대한 설정 코드를 작성하는 메서드
@@ -48,19 +54,23 @@ public class SecurityConfig {
         .authorizeHttpRequests(auth ->
                 //auth.anyRequest().permitAll() //아무나 접근 가능
                 auth.requestMatchers("/test2").authenticated()
-                                      .anyRequest().permitAll()
+                    .requestMatchers("/test3").hasRole("ADMIN")
+                    .anyRequest().permitAll()
                 //controller의 test2는 인증된 사람만 가능하고 그 외에는(test1)은 아무나 접근가능
         );
-
-
     //http.csrf((csrf)->{return csrf.disable();})
     //자바의 화살표 함수는 ()->{}이다
     //생략은 동일한데 소괄호 안의 내용의 하나라면 소괄호 생략, 중괄호는 리턴과 {}를 같이 생략
 
 
+    //모든 요청에서 토큰을 검증하는 JwtConfirmFilter 클래스를 SecurityFilterChain에 추가
+    //JwtConfirmFilter 클래스는 LoginFilter가 진행되기 전에 실행되도록 설정 함
+    http.addFilterBefore(new JwtConfirmFilter(jwtUtil), LoginFilter.class);
+
+
     //원래 로그인 요청을 받는 UsernamePasswordAuthenticationFilter 대신
     //우리가 커스터마이징한 LoginFilter 를 사용하도록 필터 교체
-    http.addFilterAt(new LoginFilter(authenticationManager), UsernamePasswordAuthenticationFilter.class);
+    http.addFilterAt(new LoginFilter(authenticationManager, jwtUtil), UsernamePasswordAuthenticationFilter.class);
 
 
     return http.build();
