@@ -28,7 +28,12 @@ export default function RootLayout() {
   return (
     <>
       <Stack screenOptions={{ headerShown: false }} />
-      <StatusBar style="auto" />
+      <StatusBar style="auto" translucent={false} />
+      {/* 
+      translucent : 투명도 및 범위 설정
+      true : 반투명 + statusbar 범위 침범
+      false : 반투명 + statusbar 범위 침범하지 않음
+       */}
     </>
   );
 }

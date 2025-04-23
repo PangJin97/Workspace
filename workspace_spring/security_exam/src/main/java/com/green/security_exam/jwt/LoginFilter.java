@@ -38,7 +38,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter{
     this.jwtUtil = jwtUtil;
 
 
-  setFilterProcessesUrl("/users/login"); //로그인 요청 url을 변경
+  setFilterProcessesUrl("/member/login"); //로그인 요청 url을 변경
     setUsernameParameter("memEmail"); //이렇게 변경하지 않으면 아이디는 username으로 전달(디폴트 값이 username이라는 뜻)
     setPasswordParameter("memPw"); //이렇게 변경하지 않으면 비번은 password로 전달(디폴트 값이 password라는 뜻)
   }
