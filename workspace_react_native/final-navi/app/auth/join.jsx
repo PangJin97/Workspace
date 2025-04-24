@@ -11,21 +11,19 @@ const JoinScreen = () => {
     memName: "",
   });
 
-  //name속성이 없기 때문에 매개변수로 받아야 한다.
   const handleJoinData = (text, name) => {
     setJoinData({
       ...joinData,
       [name]: text,
     });
   };
-
   const join = () => {
-    console.log(joinData)
+    console.log(joinData);
 
     api_join(joinData)
-       .then(res => alert('성공'))
-       .catch(error => console.log(error))
-  }
+      .then((res) => alert("성공"))
+      .catch((e) => console.log(e));
+  };
 
   return (
     <View>
@@ -41,26 +39,18 @@ const JoinScreen = () => {
           label={"비밀번호"}
           isPw={true}
           value={joinData.memPw}
-          onChangeText={(text) => {
-            handleJoinData(text, "memPw");
-          }}
+          onChangeText={(text) => handleJoinData(text, "memPw")}
         />
       </View>
       <View>
         <CustomInput
           label={"이름"}
           value={joinData.memName}
-          onChangeText={(text) => {
-            handleJoinData(text, "memName");
-          }}
+          onChangeText={(text) => handleJoinData(text, "memName")}
         />
       </View>
       <View>
-        <CustomButton 
-        label="회원가입" 
-        size="large" 
-        onPress = {()=>{join()}}
-        />
+        <CustomButton label="회원가입" size="large" onPress={() => join()} />
       </View>
     </View>
   );
