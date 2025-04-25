@@ -1,14 +1,50 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import FeedItem from "../../../components/common/FeedItem";
+import { dummyData } from "../../../apis/dummyData";
+import { colors } from "../../../constants/colorConstant";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 const HomeScreen = () => {
+  const data = dummyData;
+
   return (
-    <View>
-      <Text>첫페이지 입니다</Text>
+    <View style={styles.container}>
+      <FlatList
+        data={data} // 반복 돌릴 데이터
+        renderItem={({ item }) => <FeedItem item={item} />} // 아이템 마다 진행할 코드
+        keyExtractor={(item) => item.id} // 키
+        contentContainerStyle={styles.listContainer} // 리스트 디자인
+      />
+      <Pressable style={styles.writeBtn}>
+        <Ionicons name="pencil-outline" size={24} color="white" />
+      </Pressable>
     </View>
-  )
-}
+  );
+};
 
-export default HomeScreen
+export default HomeScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+  },
+
+  listContainer: {
+    paddingVertical: 14,
+    backgroundColor: colors.GRAY_200,
+  },
+
+  writeBtn : {
+    position : 'absolute',
+    width : 50,
+    height : 50,
+    backgroundColor : colors.ORANGE_600,
+    borderRadius : 50,
+    justifyContent : 'center',
+    alignItems : 'center',
+    bottom : 20,
+    right : 30
+  }
+});
