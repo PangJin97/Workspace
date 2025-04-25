@@ -27,6 +27,12 @@ public class JwtConfirmFilter extends OncePerRequestFilter {
   protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
     log.info("JwtConfirmFilter - doFilterInternal() 메서드가 실행되어, token 검증 시작!");
 
+    //클라이언트가 웹인지 앱인지 파악, 현재 웹에는 설정하지 않았기 때문에 null이 전달되고
+    //앱은 'app'으로 전달됨
+    String clientType = request.getHeader("clientType");
+    clientType =clientType == null ? "web" : clientType;
+
+
     //요청 시 전달되는 Authorization 헤더를 찾음
     String authorization = request.getHeader("Authorization");
 
