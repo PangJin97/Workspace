@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  font-family: "Montserrat", sans-serif; 
+}
+
+body{
+  background-color: lightcyan;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 360px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0px 3px 6px #dddddd;
+  /* 좌우방향기준으로 그림자가 늘어남. 1. 밑의 그림자가 늘어남 
+   2. 그림자의 퍼짐 정도 3. 그림자의 색*/
+   overflow: hidden;
+   /* 사진이 흘러넘치니까 오버플로우 히든 */
+   /* 전체 영역의 테두리에서 오버플로우를 줘서 위, 좌, 우는 숨겨짐 */
+}
+
+.img-div{
+  width: 100%;
+  height: 200px;
+  /* 이미지가 들어갈 공간*/
+  position: relative;
+  /* 하트 이미지 앱솔의 기준 */
+  overflow: hidden;
+  /* 전체 레이아웃 에는 히든이 걸려서 위와 좌우는, 이미지가 히든이 됐지만, 사진 영역에도 히든을 걸어서
+  이미지가 아래 테두리에도 히든이 되도록한다.*/
+
+  /* 오버 플로우 히든은 콘텐츠를 부모요소에 맞게 자르는 것,
+  부모요소에 오버플로우 걸기 
+  scroll, auto도 마찬가지*/
+}
+
+.img-div > img {
+  width: 100%;
+  height: 100%;
+  /* 이미지 들어간 공간에 맞춰서 100% 다 맞춘다. */
+  
+  /* 이미지 h값을 임의로 변경하면 가로 세로 비율이 망가짐
+  w만 주면 비율이 일정하게 늘어난다. */
+  /* 그래서 이미지 크기를 변경할때 w만 준다. */
+  /* 찌그러지면 오브젝트 핏과 포지션을 쓴다. */
+
+  object-fit: cover;
+  /* contain: 이미지의 짤리는 부분은 없지만 (다 나옴) 여백 발생할 수있다. */
+  /* cover: 여백이 발생하지 않지만 영역을 벗어날만큼 늘어나기 때문에 
+   이미지의 일부분이 짤림  */
+  
+  object-position: center center;
+  /* 이미지가 보여줄 위치를 지정 */
+  /* 첫번째 값 : 가로정렬 */
+  /* 두번째 값 : 세로정렬 */
+  /* 가로값 : left, center, right */
+  /* 세로값 : top center bottom */
+
+  transition: all 1s;
+  /* 변화시킬 자기 자신에게 건다. */
+
+}
+
+.img-div > img:hover{
+  scale: 1.1;
+  /* 마우스를 갔다 둘때 바꿔야 하니까. 따로 css */
+  /* 호버에는 scale이라는 속성이 있는데 마우스를 뒀을 때 크기가 
+  커짐 */
+}
+
+.img-div > span{
+  position: absolute;
+  /* 엡솔을 주면 마음대로 움직일 수 있다. */
+  /* 하트 */
+  right: 10px;
+  top: 10px;
+  color: white;
+}
+
+.detail-div{
+  padding: 10px;
+}
+
+.detail-div-2{
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-evenly;
+  /* 사이 공간을 동일하게 준다. */
+  align-items: center;
+  padding: 20px 0px;
+  margin: 12px 0px;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+.detail-div-3 button{
+  background-color: limegreen;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  width: 100px;
+  height: 30px;
+
+  cursor: pointer;
+  /* 커서를 버튼에 갔다 대면 커서가 손가락 모양으로 바뀜 */
+  margin-left: auto;
+  /* margin: auto 가운데로 */
+  /* margin-left: auto 좌로 정렬 */
+}
+
+.detail-div-3 button:hover{
+  background-color: rgb(40,195,40);
+}
+
+.info > img{
+  width: 40px;
+  border-radius: 50%;
+  border:1px solid lightgrey;
+}

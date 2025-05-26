@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  font-family: "Montserrat", sans-serif; 
+}
+
+.container{
+  height: 100vh;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page{
+  box-shadow: 2px 2px 1px lightgrey;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* ============================================== */
+
+/* 페이지의 첫번째 영역 */
+/* 하트 호텔 사진안에 넣기 */
+.position{
+  position: relative;
+}
+
+.position > img{
+  width: 400px;
+}
+
+.position > i{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+}
+
+
+/*  페이지의 두번째 영역 */
+.font_1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 10px;
+/* 문장들을 플렉스로 나열했다. */
+}
+
+.money{ 
+  font-size: 3rem;
+  color: orange;
+  font-weight: 600;
+}
+.terrace{
+  color: gray;
+  font-size: 1.3rem;
+}
+
+/* ----------------------- */
+
+/* 페이지의 3번째 영역 */
+.room{
+  display: flex;
+  gap:40px;
+  justify-content: center;
+  align-items: center;
+  /* 안에서 또 2개의 영역을 나눠서 플렉스 */
+  margin: 30px;
+}
+
+.room span:nth-child(1){
+  font-weight: bold;
+}
+
+/* ===================================== */
+
+/* 페이지의 4번째 영역 */
+.face{
+  border-radius: 50%;
+  width: 60px;
+  border: 1px solid lightgray;
+}
+
+.button_1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* left랑 버튼 영역 플렉스줘서 가운데에서 양 옆으로 */
+
+.left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+/* 사진이랑 글자 구역 플렉스 걸고 정렬, 사이여백주고, 위쪽 여백까지 */
+
+button{
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 100px;
+}
+
+
+button:hover{
+  color: black;
+  background-color: aqua;
+}

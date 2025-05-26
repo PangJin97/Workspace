@@ -1,0 +1,70 @@
+.container{
+  border: 5px solid black;
+  /* 대부분의 태그의 높이값은 안에 있는 내용만큼 잡힘*/
+  /* 블록이냐 인라인이냐에 따라 너비값이 잡힘 */
+  /* 즉 내용물 만큼 잡힘 */
+  
+  /* 높이를 강제로 줄 수 있지만 %를 줘도 부모 태그인
+  body는 내용이 없어서 안 채워짐, px? 언제 채울래*/
+  
+  height: 100vh;
+  /* 화면에, 눈에 보이는 내용물이 보이는 영역. 100은 화면의 100퍼센트 : vh, vw */
+  
+  width: 100%;
+  /* width: 100% 해도 적용됨 */
+  /* 너비는 100%, 100vw 구분 좀 해야한다. */
+  /* 100vw: 스크롤을 포함, 100% : 스크롤 너비는 제외*/
+  background-color: #caf4ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* black blue red */
+  gap:10px
+}
+
+.member{
+  width: 300px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 6px;
+  display: flex;
+  /* member가 플렉스 컨테이너 */
+  /* 플렉스를 줘서 아이템들을 옆으로 나열 */
+  gap: 10px;
+  align-items: center;
+  /* 교차축을 가운데로 줘서 아이템들을 가운데로 */
+  /* align-items: center; 을 안줬을때는 strech가 기본값이라 위에 살짝 붙어
+  있어서 가운데로 옮긴다.  */
+  /* blue red */
+  padding: 10px;
+  transition: all 0.7s;
+}
+
+img{
+  border: 2px solid blue;
+  border-radius: 50%;
+  width: 20%;
+  height: 50px;
+  /* 플렉스 아이템1 */
+}
+
+.detail{
+  border: 2px solid red;
+  width: 80%;
+}
+/* 플렉스 아이템2 */
+
+.name{
+  font-weight: 600;
+  /* 볼드는 700이다 */
+}
+
+.email{
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.member:hover{
+  scale: 1.1;
+}

@@ -1,0 +1,187 @@
+.container{
+  width: 1200px;
+  margin: 0px auto;
+}
+/* 플렉스 안주고 마진으로 가운데 정렬 */
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: #0c51a6;
+  color: white;
+}
+/* h1과 ul을 먼저 flex로 정렬하고 space between으로 정렬 */
+/* 그 다음에 h1에 마진을 줘서 왼쪽에서 떨군다 */
+
+.header > h1 {
+  margin-left: 30px;
+}
+
+.header > ul {
+  display: flex;
+  background-color: #0a4288; 
+  width: 600px;
+  /* 영역 감이 안오면 걍 테두리 줘 */
+  justify-content: space-around;
+  padding: 16px 0px;
+}
+/* li태그를 가로정렬하기 위해 ul태그에 flex주기 */
+/* ul태그 안에 space-around주기 */
+/* 패딩은 상,하만 좌우는 이미 공백이 있다. */
+
+.header a{
+  color: white;
+  /* a태그를 직접 건드리기 */
+  text-decoration: none;
+  /* 밑줄 삭제 */
+}
+
+
+/* xxxxxx배너영역xxxxxxxxxxxxxx */
+
+.banner{
+  position: relative;
+  
+}
+
+.banner > img{
+  width: 100%;
+}
+
+img{
+  display: block;
+  /* img는 글자를 위한 태그라서 아래여백이 생김. display:block으로 변경 */
+}
+
+.banner > div{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* absolute를 줄때는 top, left값을 0을 같이주자 그 다음에 relative */
+}
+/* 글귀영역을 사진 중간에 정렬하기 위해 
+글귀 영역을 감싸는 부모태그를 만들어서 플렉스를 준다.*/
+/* 글 영역과 사진 사이에 div하나를 더 씌운다 생각하자. */
+
+.banner > div > div{
+  background-color: rgb(0, 0, 0, 0.4);
+  width: 400px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+ 
+
+.banner > div > div >p:first-child{
+  font-size: 2.5rem;
+}
+
+
+/* _------------------내용영역------------ */
+
+.content{
+  display: flex;
+ 
+}
+
+.content > div{
+  /* flex-grow: 1; */
+  width: 33%;
+}
+
+.content img{
+  width: 100%;
+  height: 100%;
+}
+
+.banner1{
+  position: relative;
+}
+
+.reserve{
+  text-align: center;
+  width: 80%;
+  color: white;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  /* 플렉스를 안주고도 top 50%, left 50% 주고 transform: translate(-50%,-50%)*/
+  /* top 50% left 50%를 주고 정중앙에 두면 그곳의 너비의 반만큼만 움직이면 되니까
+  x좌표 y좌표 -50%만 주면된다는 의미 */
+}
+
+.reserve > button{
+  background-color: rgb(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 10px;
+  margin-top: 10px;
+  /* 인라인 블록이라 마진가능 */
+}
+
+.reserve > button:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+.board{
+  padding: 10px;
+  background-color: #e5f1ff;
+}
+
+.board a{
+  color: black;
+  text-decoration: none;
+}
+
+.board li{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  /* li태그 안에 있는 아이템을 정렬해야하니까  */
+}
+
+.board > h2{
+  margin-bottom: 12px;
+}
+
+
+/* --------------푸터 영역 -------------------- */
+
+
+.footer{
+  display: flex;
+  padding: 30px;
+  background-color: lightgrey;
+}
+
+.footer > h1{
+  width: 40%;
+}
+.footer > div{
+  width: 50%;
+}
+/* 영역을 미리 잡고  테두리 넣고 작업했다. 푸터영역보면  h1영역과 메뉴영역의 정렬이 
+쉽지않다. */
+
+.footer-menu{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+/* ul태그안에 있는 li도 정렬해야하니까 flex주기 */
+
+.footer p{
+  text-align: center;
+  margin-top: 6px;
+}

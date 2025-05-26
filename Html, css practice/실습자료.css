@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  font-family: "Montserrat", sans-serif; 
+}
+
+/* 강사님은 전체영역을 body와 container로 잡았고 
+container안에 글영역과 이미지 영역으로 나눴다. */
+
+body{
+  width: 100%;
+  background-color: lightslategray;
+}
+/* 100%는 스크롤바 포함하지 않는다, vh와 vw의 차이점  */
+/* 높이도 잡지 않는다. 높이는 내용만큼 잡힌다. */
+
+.container{
+  background-color: white;
+  width: 80%;
+  /* 높이는 주지않는다. 내용만큼 잡히니까 너비만 잡는다. */
+  margin: 20px auto;
+  /* 굳이 플렉스 주지 않고, 마진을 줘서 가운데 정렬하고 상하 마진 줌 */
+  padding: 16px;
+}
+
+
+.intro{
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.intro > span{
+  background-color: lightpink;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 8px 20px;
+}
+/* 버튼이 아니라 span태그를 줬다. span은 인라인 요소라 너비를 주지 못해
+그래서 padding을 줌, 만약 p태그를 줬다면 너비를 주면 된다. */
+
+/* 그리고 span은 인라인 요소라 상하마진 먹지 않는다. 블록요소인 p태그는 먹음 */
+
+
+.intro > h3{
+  margin: 20px 0px;
+  font-size: 2.5rem;
+}
+
+.intro > h3 > span{
+  color: lightskyblue;
+}
+
+
+/* -------------------글 영역------------------------- */
+
+
+
+.list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+  
+  /* 2차원 형식('면')의 격자형태니까 그리드를 쓴다. 
+  html에서 먼저 요쇼의 갯수를 넣고 ,부모태그에 
+  display 그리드를 쓰고, 그 다음에 행과 열의 개수를 만든다.*/
+}
+
+
+.member{
+  border: 5px solid blue;
+  position: relative;
+}
+
+.member > img {
+  width: 100%;
+  /* 이미지를 grid로 만든 member 박스(blue)안에 딱 맞춰려면*/
+
+  /* 근데 원래 인라인 태그는 글자를 넣기 위한 태그,
+   영어에 g나 y같은 꼬랑지가 있는 문자를 위해 
+   여백을 여유롭게 줘서 너비를
+  맞춰도 아래에 여백이 조금있다 */
+ 
+  height: 100%;
+  /* 그래서 높이도 100% 준 건데. 
+  준 순간 이미지가 깨짐. 
+  그래서 옵젝 핏을 줌 */
+  object-fit: cover;
+  object-position: center center;
+
+}
+
+.detail{
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  
+  position: absolute;
+  top: 0px;
+  left: 0px;
+ 
+  /* 앱솔, 릴레이티브 부터 주지 말고 , 먼저 앱솔을 주고 앱솔의 세트인
+  top left속성을 통해 위치를 본다. 그 다음에 relative */
+  
+  /* 앱솔 탑과 왼쪽을 0으로 두면 좌상단에 위치할거임 부모태그 기준이니까
+   ,사진을 기준으로 바꾼다 */
+  
+  color: white;
+  background-color: rgb(0, 0, 0, 0.3);
+  /* 마지막값은 선명도, 불투명도 0~1사이 */
+  /* 배경은 검정주고 선명도만 낮게 했다. */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* 안에 있는 글자들 가운데 정렬하려고 플레스 */
+
+  transition: all 1s;
+  /* visibility hidden과
+  display는 안먹힘 , 근데 opacity는 됨 */
+
+  opacity: 0;
+  /* visibility: hidden; */
+}
+
+ .detail:hover{
+  opacity: 1;
+} 
+
+/* display: none은 공간 자체도 소멸 */
+/* hidden은 공간'만'살아있음 */
+/* 그래서 히든을 적용해도 hover가 작동을 안했음 공간만 있으니까 */
+
+/* 반면 opacity는 그냥 불투명도만 정하는 거니 hover을 걸어도 적용됨 */
+
+
+.sns{
+  font-size: 1.2rem;
+}
+
+.sns:hover{
+  color: lightskyblue;
+  cursor: pointer;
+  /* 글자취급하면 됨 */
+}
+
+
+
+
+
+
